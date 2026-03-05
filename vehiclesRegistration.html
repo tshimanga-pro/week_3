@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+
+  <body class="register-page">
+    <div class="nav-set">
+      <nav class="navbar">
+        <div class="logo">ParkEase</div>
+
+        <ul class="nav-links">
+          <li>
+            <a href="register.html" class="register-link">Register Vehicle</a>
+          </li>
+
+          <li><a href="reports.html">Admin</a></li>
+          <li><a href="batterySection.html">Battery Section</a></li>
+          <li><a href="tyreClinic.html">Tyre Clinic</a></li>
+          <li><a href="signout.html">Check Out</a></li>
+        </ul>
+
+        <div class="nav-right">
+          <span class="user-role">Admin</span>
+          <a href="index.html" class="logout-btn">Logout</a>
+        </div>
+      </nav>
+      <div class="form-card">
+        <h2>Vehicle Registration</h2>
+
+        <form id="registrationForm">
+          <label for="driverName">Driver Name</label>
+          <input type="text" id="driverName" name="driverName" required minlength="2" />
+          <label for="numberPlate">Number Plate</label>
+          <input type="text" id="numberPlate" name="numberPlate" required pattern="[A-Za-z0-9\- ]+" title="Alphanumeric characters only" />
+          <label for="vehicleModel">Vehicle Model</label>
+          <input type="text" id="vehicleModel" name="vehicleModel" required />
+          <label for="vehicleColor">Vehicle Color</label>
+          <input type="text" id="vehicleColor" name="vehicleColor" required />
+          <label for="arrivalTime">Arrival Time</label>
+          <input type="time" id="arrivalTime" name="arrivalTime" required />
+          <label for="date">Date</label>
+          <input type="date" id="date" name="date" required />
+          <label for="phoneNumber">Phone Number</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" required pattern="\d{10}" title="10 digit phone number" />
+          <label for="ninNumber">NIN Number (Required for Boda Bodas)</label>
+          <input type="text" id="ninNumber" name="ninNumber" pattern="\d{8,10}" title="8–10 digit NIN" />
+          <label for="vehicleType">Vehicle Type</label>
+          <select id="vehicleType" name="vehicleType" required>
+            <option value="">-- Select Vehicle Type --</option>
+            <option value="Truck">Truck</option>
+            <option value="Personal Car">Personal Car</option>
+            <option value="Taxi">Taxi</option>
+            <option value="Coaster">Coaster</option>
+            <option value="Boda Boda">Boda Boda</option>
+          </select>
+
+          <button type="submit" class="btn-submit">Register Vehicle</button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
